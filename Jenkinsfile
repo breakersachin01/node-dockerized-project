@@ -31,7 +31,7 @@ pipeline {
         steps{
           withCredentials([usernamePassword(credentialsId: 'docker_cred', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
           bat 'docker login -u %DOCKERHUB_USERNAME% -p %DOCKERHUB_PASSWORD%'
-          bat 'docker tag my-node-app:3.0 atishay3012/my-node-app:3.0'
+          bat 'docker tag my-node-app:3.0 sachin0123/my-node-app:3.0'
           bat 'docker logout'
         }
       }
